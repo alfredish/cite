@@ -1,0 +1,8 @@
+/* theme screen stylesheets */
+
+/* import stylesheets and hide from ie/mac \*/
+@import url("static/reset.css");
+@import url("static/960.css");
+@import url("static/KeepItSimple.css");
+/* end import/hide */
+

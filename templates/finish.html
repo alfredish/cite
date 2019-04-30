@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content_left %}
+
+<h4 style="font-size:20px">Вы указали: {{ Ingredients }}</h4>
+<h4 style="font-size:20px">Из этого можно приготовит :</h4>
+<p style="font-size:20px">{{ eat }}</p>
+
+{% for i in superList %}
+
+<p style="font-size: 20px"><a href="/{{i}}">{{ i.lower().title() }}</a></p>
+{% endfor %}
+<!-- Список с блюдами-->
+
+{% endblock %}
+
+
+

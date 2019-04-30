@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Что поесть ?</title>
+	<link rel="stylesheet"  href="static/css/reset.css">
+	<link rel="stylesheet"  href="static/css/960.css">
+	<link rel="stylesheet"  href="static/css/KeepItSimple.css">
+	<link rel="shortcut icon" href="static/images/title.jpg" type="image/png">
+	<meta name="description" content="Что поесть? - поможем вам приготовить еду">
+</head>
+
+<body>
+	<!-- header starts-->
+	<div id="header-wrap"><div id="header" class="container_16">						
+		
+		<h1 id="logo-text"><a href="/" title="">Что поесть ?</a></h1>
+		<p id="intro">Поможем вам приготовить еду</p>
+		
+		<!-- navigation -->
+		<div  id="nav">
+			<ul>
+				<li><a href="/">Главная</a></li>
+				<li><a href="/recipes">Рецепты</a></li>
+				<li><a href="/sentence">Предложить свой рецепт</a></li>
+				<li><a href="/help">О нас</a></li>
+
+			</ul>		
+		</div>		
+		
+		<div id="header-image"></div>
+		<!-- header ends here -->
+
+		</div>
+
+	</div>
+	
+	<!-- content starts -->
+	<div id="content-outer">
+		<div id="content-wrapper" class="container_16">
+	
+		<!-- main -->
+		<div id="main" class="grid_8">
+<!--ШАБЛОН!!!!!!!!!!!!!! -->
+			{% block content_left %}{% endblock %}
+
+		</div>
+		
+
+		<!-- left-columns starts -->
+		<div id="left-columns" class="grid_8">
+<!--ШАБЛОН!!!!!!!!!!!!!! -->
+
+            {% block content_right %}{% endblock %}
+
+
+		</div>
+		</div>
+		<!-- end left-columns -->
+    </div>
+
+
+	<!-- footer starts here -->	
+	<div id="footer-wrapper" class="container_16">
+	
+
+
+
+		<div id="footer-bottom">
+
+			<p class="bottom-right" >
+				<a href="/">Home</a> |
+				<a href="/advertising">Реклама</a>
+			</p>
+	
+		</div>	
+			
+	</div>
+	<!-- footer ends here -->
+
+</body>
+
+</html>

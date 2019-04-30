@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content_left %}
+
+<p style="font-size: 20px">Тут вы можете предложить свой рецепт, который будет добавлен на сайт.</p>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }} <!--Защита от атак типо того -->
+    <p>{{ form.name_recipe.label }}</p>
+    <p>{{ form.name_recipe(style='width:100%;height: 10px;') }}</p>
+    <p>{{ form.main_recipe.label }}</p>
+    <p>{{ form.main_recipe(style='width:100%;height: 100px;') }}</p>
+    <p>{{ form.Ingredients_main_recipe.label }}</p>
+    <p>{{ form.Ingredients_main_recipe(style='width:100%;height: 50px;') }}</p>
+    <p>{{ form.submit_name_recipe(style='width:100%') }}</p>
+</form>
+{% endblock %}
+
+
+{% block content_right %}
+
+
+{% endblock %}

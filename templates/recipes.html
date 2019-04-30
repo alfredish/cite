@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content_left %}
+
+
+{% for i in recipes_list1 %}
+    <p style="font-size: 30px"><a href="/{{ i }}">{{ i.lower().title() }}</a></p><br>
+{% endfor %}
+
+{% endblock %}
+
+
+{% block content_right %}
+
+{% for i in recipes_list2 %}
+    <p style="font-size: 30px"><a href="/{{i}}">{{ i.lower().title() }}</a></p><br>
+{% endfor %}
+
+{% endblock %}

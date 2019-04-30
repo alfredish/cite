@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content_left %}
+
+<h1>Админ страничка</h1>
+<h4>Добавить рецепт</h4>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }} <!--Защита от атак типо того -->
+    <p>{{ form.admin_name_recipe.label }}</p>
+    <p>{{ form.admin_name_recipe(style='width:100%;height: 10px;') }}</p>
+    <p>{{ form.admin_main_recipe.label }}</p>
+    <p>{{ form.admin_main_recipe(style='width:100%;height: 100px;') }}</p>
+    <p>{{ form.admin_Ingredients_main_recipe.label }}</p>
+    <p>{{ form.admin_Ingredients_main_recipe(style='width:100%;height: 50px;') }}</p>
+    <p>{{ form.admin_submit_name_recipe(style='width:100%') }}</p>
+</form>
+
+
+<h4>Сделать запрос к базе данных main_help</h4>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>{{ form.sql.label }}</p>
+    <p>{{ form.sql(style='width:100%;height: 10px;') }}</p>
+    <p>{{ form.sql_submit(style='width:100%') }}</p>
+</form>
+
+{% endblock %}
+
+
+
+
+{% block content_right %}
+
+<h4>Предлагаемые рецепты в main_help</h4>
+
+{% for i in db %}
+    <p>{{i}}</p>
+{% endfor %}
+
+{% endblock %}

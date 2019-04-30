@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content_left %}
+
+<h1>О нас</h1>
+<p style="font-size: 15px"><i style="font-size: 20px">Что поесть ?</i> - это молодая команда разработчиков, которая стремится создать полезный ресурс и  сделает жизнь людей проще.</p>
+
+<!--
+<h1>Финансовая помощь</h1>
+<p style="font-size: 15px">Если вам нравится наш ресурс, то вы можете помочь нам по одной из ссылок ниже. </p>
+<p style="font-size: 15px">Все ваши средства пойдут на развитие проекта. </p>
+-->
+
+
+
+{% endblock %}
+
+
+
+{% block content_right %}
+
+
+<h1>Обратная связь</h1>
+<p style="font-size: 15px">Тут вы можете оставить отзывы и пожелания о нашем сервесе и получить ответ на любов вопрос.</p>
+
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p> {{ form.email.label }}</p>
+    <p> {{ form.email(style='width:100%') }}</p>
+    <p> {{ form.FeedbackForm.label }} </p>
+    <p> {{ form.FeedbackForm(style='width:100%;height: 100px;') }} </p>
+    <p> {{ form.submit_help(style='width:100%') }}</p>
+
+</form>
+
+{% endblock %}
